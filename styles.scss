@@ -1,3 +1,99 @@
+$width: calc(50% - 20px);
+
 body {
     max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: MistyRose;
+    padding: 15px 0;
+        h1 {
+        font-family: 'Bebas Neue', cursive;
+            text-align: center;
+            color: rosybrown;
+            width: 100%;
+            margin: 0;
+        }
+}
+main {
+    width: 70%;
+    background-color: rgba($color: #DCDCDC, $alpha: 0.1);
+    display: block;
+    margin: 0 auto;
+    h2 {
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        color: rosybrown;
+    }
+}
+.posts {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    .posts__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .post_container {
+        background-color: aliceblue;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: border-box;
+        box-shadow: 6px 4px 1px rgba($color: #000000, $alpha: 0.2);
+        }
+        .posts__username {
+            font-family: 'Slabo 27px', serif;
+            max-width: 100%;
+            height: auto;
+            padding: 7px;
+            background-color: mistyrose;
+            color: rosybrown;
+        }
+        .posts__title {  
+            font-family: 'Abel', sans-serif;
+            &:before {
+                content: "Title: ";
+                text-transform: uppercase;
+                font-weight: bold;
+                color: CornflowerBlue;
+            }
+        }
+        .posts__body {
+            font-family: 'Abel', sans-serif;
+            &:before {
+                content: "Body: ";
+                text-transform: uppercase;
+                font-weight: bold;
+                color: CornflowerBlue;
+            }
+        }
+        .posts_selected, .posts_other, .posts_random {
+            width: 100%;
+            display: block;
+        }
+        .posts_random {
+            .post_container {
+                background-color: snow;
+            }
+        }
+        .selected_posts__container, .other_posts__container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            .post_container {
+                flex: 0 1 $width;
+            }
+        }
+        .other_posts__container {
+            .post_container {
+                background-color: Seashell;
+            }
+        }
 }
